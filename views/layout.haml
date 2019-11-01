@@ -1,0 +1,17 @@
+!!! 5
+%html
+  %head
+    %title URL Shortener
+    %link{rel: "stylesheet",
+          type: "text/css",
+          href: "/styles/screen.css"}
+    %meta{content: "width=device-width, initial-scale=1",
+          name: "viewport"}
+  %body
+    #grid
+      .panel
+        %h1 URL Shortener 🔗
+        = yield
+    - if defined?(@script)
+      %script{src: "scripts/#{@script}.js",
+              type: "text/javascript"}

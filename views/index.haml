@@ -1,0 +1,8 @@
+%p Please enter a URL to shorten.
+%form.form{action: "/",
+           method: "post",
+           onsubmit: "return validateForm();"}
+  %input#url.control{name: "url",
+             type: "text",
+             placeholder: "Long URL"}
+  %button#shorten.control{type: "submit"} Shorten
